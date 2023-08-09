@@ -32,18 +32,16 @@ public class Main {
         System.out.println("\n" + "Задача 2" + "\n");
         int arr[] = generateRandomArray();
         int minOutlay = arr[0];
+        int maxOutlay = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < minOutlay) {
                 minOutlay = arr[i];
             }
-        }
-        System.out.println("Минимальная сумма трат за день составила " + minOutlay);
-        int maxOutlay = arr[0];
-        for (int i = 0; i < arr.length; i++) {
             if (arr[i] > maxOutlay) {
                 maxOutlay = arr[i];
             }
         }
+        System.out.println("Минимальная сумма трат за день составила " + minOutlay);
         System.out.println("Максимальная сумма трат за день составила " + maxOutlay);
     }
 
@@ -54,7 +52,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             sumInMonth += arr[i];
         }
-        double spendedForMonth = sumInMonth / 30;
+        double spendedForMonth = sumInMonth / arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + spendedForMonth + " рублей.");
     }
 
